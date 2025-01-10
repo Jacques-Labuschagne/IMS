@@ -11,10 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DependencyInjection\" />
-    <Folder Include="DTO\" />
-    <Folder Include="Interface\" />
-    <Folder Include="Service\" />
+    <Folder Include="DTO\Request\ActivityTracker\" />
+    <Folder Include="DTO\Request\Orders\" />
+    <Folder Include="DTO\Request\Products\" />
+    <Folder Include="DTO\Response\ActivityTracker\" />
+    <Folder Include="DTO\Response\Orders\" />
+    <Folder Include="DTO\Response\Products\" />
+    <Folder Include="Interface\Identity\" />
+    <Folder Include="Service\Orders\" />
+    <Folder Include="Service\Products\" />
   </ItemGroup>
 
   <ItemGroup>

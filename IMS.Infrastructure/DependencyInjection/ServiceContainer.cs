@@ -1,5 +1,6 @@
 using IMS.Application.Extension.Identity;
 using IMS.Infrastructure.DataAccess;
+using IMS.Infrastructure.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,7 +36,7 @@ public static class ServiceContainer {
             });
 
         services.AddCascadingAuthenticationState();
-        //services.AddScoped<Application.Interface.Identity.IAccount, Account>();
+        services.AddScoped<Application.Interface.Identity.IAccount, Account>();
         //services.addMediatR(cfg => cfg.RegisterServiceFromAssemblies(typeof(CreateProductHandler).Assembly));
         //Services.AddScoped<DataAccess.IDbContextFactory<AppDbContext>, DbContextFactory<AppDbContext>>();
 

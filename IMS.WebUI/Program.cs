@@ -1,3 +1,5 @@
+using IMS.Infrastructure.DependencyInjection;
+using IMS.Application.DependencyInjection;
 using IMS.WebUI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
+builder.Services.AddInfrastructureService(builder.Configuration);
+builder.Services.AddApplicationService();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

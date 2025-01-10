@@ -1,0 +1,13 @@
+using IMS.Application.Service.Identity;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace IMS.Application.DependencyInjection;
+
+public static class ServiceContainer {
+
+    public static IServiceCollection AddApplicationService(this IServiceCollection services) {
+
+        services.AddScoped<IAccountService, AccountService>();
+        return services;
+    }
+}
