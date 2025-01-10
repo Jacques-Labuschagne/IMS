@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Components\Layout\Navigationbar\" />
+    <Folder Include="Components\Layout\Sidebar\" />
+    <Folder Include="Components\Pages\Content\Products\" />
+    <Folder Include="Components\Pages\General\" />
     <Folder Include="Hubs\" />
     <Folder Include="States\" />
   </ItemGroup>

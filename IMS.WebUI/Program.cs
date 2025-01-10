@@ -1,6 +1,8 @@
 using IMS.Infrastructure.DependencyInjection;
 using IMS.Application.DependencyInjection;
 using IMS.WebUI.Components;
+using Microsoft.AspNetCore.Components.Authorization;
+using IMS.WebUI.Components.Layout.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddApplicationService();
+builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthStateProvider>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
